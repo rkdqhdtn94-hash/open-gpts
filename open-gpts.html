@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+
+  <script>
+    const target = "https://chatgpt.com/g/g-695f1442c6248191b35df628781151d3-estec-insagyujeong-gpts";
+
+    // Edge 판별
+    const isEdge = navigator.userAgent.includes("Edg");
+
+    if (isEdge) {
+      // Edge 사용자 → 바로 이동
+      window.location.replace(target);
+    } else {
+      // Chrome 등 → Edge 강제 실행
+      window.location.replace("microsoft-edge:" + target);
+    }
+  </script>
+</head>
+<body></body>
+</html>
